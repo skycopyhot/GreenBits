@@ -4,7 +4,7 @@ matrix:
   include:
     - services:
         - docker
-      script: docker run -v $PWD:/gb greenaddress/android@sha256:da4344cf07badff07f3967ac2d82bf75acd925ffbba2d8f9e3cc78343d7cbe23 /bin/sh -c "cd /gb && ./app/fetch_libwally_binaries.sh && ./gradlew --project-dir=bitcoinj/tools build && ./gradlew assembleProductionRelease"
+      script: docker run -v $PWD:/gb greenaddress/android@sha256:5ebd8c5b78e6cbd0fca507c920af095e05c7b2f43daea0a92597e3360f30e50c /bin/sh -c "cd /gb && ./app/fetch_libwally_binaries.sh && ./gradlew --project-dir=bitcoinj/tools build && ./gradlew assembleProductionRelease"
     - os: osx
       osx_image: xcode8.3
       env:
@@ -25,7 +25,7 @@ matrix:
         - cd $HOME/build/greenaddress/GreenBits && ./gradlew assembleProductionDebug
     - services:
         - docker
-      script: docker run -v $PWD:/gb greenaddress/android@sha256:da4344cf07badff07f3967ac2d82bf75acd925ffbba2d8f9e3cc78343d7cbe23 /bin/sh -c "cd /gb && ./app/fetch_libwally_binaries.sh && ./gradlew --project-dir=bitcoinj/tools build && ./gradlew assembleBtctestnetRelease"
+      script: docker run -v $PWD:/gb greenaddress/android@sha256:5ebd8c5b78e6cbd0fca507c920af095e05c7b2f43daea0a92597e3360f30e50c /bin/sh -c "cd /gb && ./app/fetch_libwally_binaries.sh && ./gradlew --project-dir=bitcoinj/tools build && ./gradlew assembleBtctestnetRelease"
     - services:
         - docker
-      script: docker run -v $PWD:/gb greenaddress/android@sha256:da4344cf07badff07f3967ac2d82bf75acd925ffbba2d8f9e3cc78343d7cbe23 /bin/sh -c "cd /gb && ./app/fetch_libwally_binaries.sh && ./gradlew --project-dir=bitcoinj/tools build && ./gradlew assembleElementsregtestRelease"
+      script: docker run -v $PWD:/gb greenaddress/android@sha256:5ebd8c5b78e6cbd0fca507c920af095e05c7b2f43daea0a92597e3360f30e50c /bin/sh -c "cd /gb && ./app/fetch_libwally_binaries.sh && ./gradlew --project-dir=bitcoinj/tools build && ./gradlew assembleElementsregtestRelease"
